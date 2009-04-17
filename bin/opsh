@@ -1,0 +1,21 @@
+#!/bin/env perl
+
+#
+# File: opsh
+#
+# Copyright (c) 2009 TiVo Inc.
+#
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Common Public License v1.0
+# which accompanies this distribution, and is available at
+# http://opensource.org/licenses/cpl1.0.txt
+#
+
+use strict;
+use warnings;
+
+use OP::Shell;
+
+my $shell = OP::Shell->new();
+
+$shell->run();

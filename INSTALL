@@ -1,0 +1,12 @@
+This distribution has a large number of dependencies, and is best
+installed from CPAN.
+
+  perl -MCPAN -e 'install OP'
+
+Assuming dependencies have been installed, this may also be done manually.
+
+  cd OP-xxxx
+  perl Makefile.PL
+  make
+  make install
+
