@@ -8,18 +8,6 @@
 # which accompanies this distribution, and is available at
 # http://opensource.org/licenses/cpl1.0.txt
 #
-package UNIVERSAL;
-
-#
-# Workaround for AutoLoader: Using Coro with OP makes AutoLoader throw
-# undef warnings in the context of a "require" statement when objects
-# without an explicit DESTROY method are culled.
-#
-# To work around this, OP adds an abstract DESTROY method to the the
-# UNIVERSAL package, which all objects in Perl inherit from. The DESTROY
-# method may be overridden as usual on a per-class basis.
-#
-sub DESTROY { }
 
 #
 # Add any cleanup/shutdown items to the DESTROY method below.
@@ -50,6 +38,21 @@ FILTER {
   my $filterText = q[ use strict; use diagnostics; use Perl6::Subs; ];
 
   s/^/$filterText/s;
+};
+
+do {
+  #
+  # Workaround for AutoLoader: Using Coro with OP makes AutoLoader throw
+  # undef warnings in the context of a "require" statement when objects
+  # without an explicit DESTROY method are culled.
+  #
+  # To work around this, OP adds an abstract DESTROY method to the the
+  # UNIVERSAL package, which all objects in Perl inherit from. The DESTROY
+  # method may be overridden as usual on a per-class basis.
+  #
+  no strict "refs";
+
+  *{"UNIVERSAL::DESTROY"} = sub { };
 };
 
 use Encode; # Load this legacy module before all else...
@@ -141,7 +144,7 @@ OP - Objective Perl 5 (Overpowered)
 
 This documentation is for version B<0.20> of OP.
 
-  $Id: //depotit/tools/source/snitchd-0.20/lib/OP.pm#30 $
+  $Id: //depotit/tools/snitchd/OP-0.20/lib/OP.pm#2 $
 
 =head1 STATUS
 
