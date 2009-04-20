@@ -35,15 +35,16 @@ do {
 };
 
 use OP::Class qw| true false |;
+use OP::Num;
 use Perl6::Subs;
 use Scalar::Util qw| blessed |;
 
 use base qw| Time::Piece::Nonpolluting OP::Array |;
 
-use overload (
+use overload
+  %OP::Num::overload,
   '""'  => '_sprint',
-  '<=>' => '_compare',
-);
+  '<=>' => '_compare';
 
 method assert(OP::Class $class: *@rules) {
   my %parsed = OP::Type::__parseTypeArgs(
@@ -130,7 +131,7 @@ __END__
 
 =head1 NAME
 
-OP::DateTime - Overloaded Time object
+OP::DateTime
 
 =head1 VERSION
 

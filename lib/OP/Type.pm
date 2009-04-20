@@ -292,11 +292,12 @@ use constant isArray => sub(Array $value) {
 };
 
 use constant isBool => sub(Bool $value) {
-  if ( !defined($value) || scalar(@_)
-    || $value !~ /^\d+$/
-    || ( $value != 0 && $value != 1 )
+  if (
+    !defined($value)
+      || !Scalar::Util::looks_like_number($value)
+      || ( ( $value != 0 ) && ( $value != 1 ) )
   ) {
-    throw OP::AssertFailed("Received value must be 0 or 1");
+    throw OP::AssertFailed("Received value must be 0 or 1, not: $value");
   }
 
   return true;

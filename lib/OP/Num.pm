@@ -12,9 +12,11 @@
 
 =head1 NAME
 
-OP::Num - Overloaded object class for numbers
+OP::Num
 
 =head1 DESCRIPTION
+
+Scalar-backed overloaded object class for numbers.
 
 Extends L<OP::Scalar> and L<Scalar::Number>.
 
@@ -56,6 +58,8 @@ our %overload = (
   '/'   => sub { "$_[0]" / "$_[1]" },
   '%'   => sub { "$_[0]" % "$_[1]" },
   '**'  => sub { "$_[0]" ** "$_[1]" },
+  '=='  => sub { "$_[0]" == "$_[1]" },
+  'eq'  => sub { "$_[0]" eq "$_[1]" },
 );
 
 use overload fallback => true, %overload;
