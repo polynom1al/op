@@ -23,6 +23,9 @@ Loads C<.oprc> values as Perl constants, with optional export.
 C<.oprc> is a YAML file containing constant values used by OP. It should
 be located under C<$ENV{OP_HOME}>, which defaults to C</opt/op>.
 
+An example C<.oprc> is included in the top level directory of this
+distribution, and also given later in this document.
+
 =head1 SYNOPSIS
 
 To import constants directly, just specify them when using OP::Constants:
@@ -43,19 +46,23 @@ namespace, just fully qualify them:
 =head1 EXAMPLE
 
 The following is an example of an .oprc file. The file contents must be
-valid YAML.
+valid YAML:
 
   ---
+  ldapHost: ldap
+  yamlRoot: /opt/op/yaml
+  sqliteRoot: /opt/op/sqlite
+  scratchRoot: /tmp
+  dbName: op
   dbHost: localhost
   dbPass: ~
   dbPort: 3306
   dbUser: op
   memcachedHosts:
     - 127.0.0.1:31337
-  sqliteRoot: /opt/op/sqlite
-  yamlRoot: /opt/op/yaml
-  scratchRoot: /tmp
-  apiUser: root
+  rcsBindir: /usr/bin
+  rcsDir: RCS
+  syslogHost: ~
 
 =cut
 
@@ -184,6 +191,10 @@ if ( $ENV{OP_HOME} && -f $path ) {
   print STDERR "    \$ENV{OP_HOME} = \"/path/to\";\n";
   print STDERR "\n";
   print STDERR "This must be corrected before proceeding.\n";
+  print STDERR "\n";
+  print STDERR "A starter .oprc should have accompanied this\n";
+  print STDERR "distribution. An example is also given on the\n";
+  print STDERR "OP::Constants manual page.\n";
   print STDERR "\n";
 
   exit(2);
