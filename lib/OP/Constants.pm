@@ -126,7 +126,7 @@ if ( $ENV{OP_HOME} && -f $path ) {
   $file->close();
 
   eval {
-    $rc = YAML::Syck::Load( join('', @yaml) );
+    $rc = YAML::Syck::Load( join('', @yaml) ) || die $@;
   };
 
   throw OP::RuntimeError($@) if $@;
@@ -147,7 +147,7 @@ if ( $ENV{OP_HOME} && -f $path ) {
     my $overlay;
 
     eval {
-      $overlay = YAML::Syck::Load( join('', @overrideYAML) );
+      $overlay = YAML::Syck::Load( join('', @overrideYAML) ) || die $@;
     };
 
     throw OP::RuntimeError($@) if $@;
@@ -223,6 +223,39 @@ for my $key ( keys %{$rc} ) {
 }
 
 =pod
+
+=head1 DIAGNOSTICS
+
+=over 4
+
+=item * No .oprc found
+
+C<.oprc> needs to exist in order for OP to compile and run.  In the
+event that an <.oprc> was not found, OP will exit with an instructive
+message. Read and follow the provided steps when this occurs.
+
+=item * Some symbol not exported
+
+  Uncaught exception from user code:
+        "______" is not exported by the OP::Constants module
+  Can't continue after import errors ...
+
+This is a compile error. A module asked for a non-existent constant
+at compile time.
+
+The most likely cause is that OP found an C<.oprc>, but the required
+symbol wasn't in the file. To fix this, add the missing named
+constant to your C<.oprc>. This typically happens when the C<.oprc>
+which was loaded is for an older version of OP than is actually
+installed.
+
+This error may also be thrown when the C<.oprc> is malformed.
+If the named constant is present in the file, but this error is still
+occurring, check for broken syntax within the file. Missing ":"
+seperators between key and value pairs, or improper levels of
+indenting are likely culprits.
+
+=back
 
 =head1 REVISION
 
