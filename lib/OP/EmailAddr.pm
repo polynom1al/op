@@ -30,7 +30,7 @@ method assert(OP::Class $class: *@rules) {
       my $self = shift;
 
       if ( !ref($self) || !UNIVERSAL::isa($self,"Email::Address") ) {
-        $self = Email::Address->parse($self);
+        $self = $class->new($self);
       }
 
       Data::Validate::Email::is_email($self->address)
