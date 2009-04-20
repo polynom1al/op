@@ -12,11 +12,9 @@
 
 =head1 NAME
 
-OP::Bool
+OP::Bool - Overloaded object class for booleans
 
 =head1 DESCRIPTION
-
-Scalar-backed overloaded object class for booleans.
 
 Extends L<OP::Scalar>.
 

@@ -131,7 +131,7 @@ __END__
 
 =head1 NAME
 
-OP::DateTime
+OP::DateTime - Overloaded Time object class
 
 =head1 VERSION
 
