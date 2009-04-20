@@ -57,7 +57,7 @@ __END__
 
 =head1 NAME
 
-OP::Recur::Each
+OP::Recur::Each - Time specification object class
 
 =head1 SYNOPSIS
 

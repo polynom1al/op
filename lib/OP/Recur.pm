@@ -12,11 +12,7 @@
 
 =head1 NAME
 
-OP::Recur
-
-=head1 DESCRIPTION
-
-Objects to represent a recurring point in time.
+OP::Recur - Object class to represent recurring points in time
 
 =head1 SYNOPSIS
 

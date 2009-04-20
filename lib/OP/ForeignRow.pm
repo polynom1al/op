@@ -207,7 +207,7 @@ __END__
 
 =head1 NAME
 
-OP::ForeignRow
+OP::ForeignRow - Foreign database row access
 
 =head1 SYNOPSIS
 

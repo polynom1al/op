@@ -235,11 +235,9 @@ __END__
 
 =head1 NAME
 
-OP::Persistence::Async
+OP::Persistence::Async - Non-blocking statement handle access for OP classes
 
 =head1 DESCRIPTION
-
-Non-blocking statement handle access for OP classes.
 
 L<POE::Wheel::Run> is used for handling database access in a forked
 background process. Unlike most other modules using POE for DB access,

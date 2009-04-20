@@ -60,7 +60,7 @@ __END__
 
 =head1 NAME
 
-OP::TimeSpan
+OP::TimeSpan - Time range object class
 
 =head1 VERSION
 
@@ -73,8 +73,6 @@ OP::TimeSpan
   my $time = OP::TimeSpan->new( 60*5 );
 
 =head1 DESCRIPTION
-
-Time range object. Represents a number of seconds.
 
 Extends L<OP::Object>, L<Time::Seconds>.
 

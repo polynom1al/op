@@ -12,11 +12,9 @@
 
 =head1 NAME
 
-OP::Double
+OP::Double - Scalar-backed overloaded object class for doubles
 
 =head1 DESCRIPTION
-
-Scalar-backed overloaded object class for doubles.
 
 Functionally the same as OP::Float. Used for differentiating between
 database-backed datatypes.

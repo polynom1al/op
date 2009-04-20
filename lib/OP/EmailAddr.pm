@@ -70,7 +70,7 @@ __END__
 
 =head1 NAME
 
-OP::EmailAddr
+OP::EmailAddr - Overloaded RFC 2822 email address object
 
 =head1 VERSION
 
@@ -102,8 +102,6 @@ OP::EmailAddr
   }
 
 =head1 DESCRIPTION
-
-Overloaded RFC 2822 email address object.
 
 Extends L<Email::Address>, L<OP::Array>. Uses L<Data::Validate::Email>
 to verify input.

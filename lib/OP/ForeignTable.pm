@@ -55,11 +55,9 @@ __END__
 
 =head1 NAME
 
-OP::ForeignTable
+OP::ForeignTable - Class factory for OP::ForeignRow
 
 =head1 DESCRIPTION
-
-Class factory for OP::ForeignRow.
 
 OP::ForeignRow responds to the same messages as OP::RRNode, except
 ForeignRow objects live in databases of external applications with

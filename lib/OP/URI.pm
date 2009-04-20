@@ -52,7 +52,7 @@ __END__
 
 =head1 NAME
 
-OP::URI
+OP::URI - Overloaded URI object class
 
 =head1 VERSION
 
@@ -65,8 +65,6 @@ OP::URI
   my $addr = OP::URI->new("http://www.example.com/");
 
 =head1 DESCRIPTION
-
-URI object.
 
 Extends L<URI>, L<OP::Str>. Uses L<Data::Validate::URI> to verify input.
 

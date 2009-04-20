@@ -12,7 +12,7 @@ package OP::Node;
 
 =head1 NAME
 
-OP::Node
+OP::Node - Abstract storable object class
 
 =head1 DESCRIPTION
 

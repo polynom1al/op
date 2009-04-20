@@ -14,11 +14,9 @@ use OP::Enum qw| MySQL SQLite |;
 
 =head1 NAME
 
-OP::Enum::DBIType
+OP::Enum::DBIType - Database type enumeration
 
 =head1 DESCRIPTION
-
-Database type enumeration.
 
 Uses L<OP::Enum> to provide constants which are used to specify database
 types. The mix-in L<OP::Persistence> class method C<__dbiType()> should

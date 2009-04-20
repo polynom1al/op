@@ -12,11 +12,9 @@
 
 =head1 NAME
 
-OP::Str
+OP::Str - Overloaded object class for strings
 
 =head1 DESCRIPTION
-
-Scalar-backed overloaded object class for strings.
 
 Extends L<OP::Scalar>, L<Mime::Base64>, and L<Unicode::String>.
 

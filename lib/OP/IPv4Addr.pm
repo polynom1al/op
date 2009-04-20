@@ -53,7 +53,7 @@ __END__
 
 =head1 NAME
 
-OP::IPv4Addr
+OP::IPv4Addr - Overloaded IPv4 address object class
 
 =head1 VERSION
 
@@ -66,8 +66,6 @@ OP::IPv4Addr
   my $addr = OP::IPv4Addr->new("127.0.0.1");
 
 =head1 DESCRIPTION
-
-Overloaded IPv4 address object.
 
 Extends L<OP::Str>. Uses L<Data::Validate::IP> to verify input.
 

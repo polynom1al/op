@@ -12,11 +12,9 @@
 
 =head1 NAME
 
-OP::Float
+OP::Float - Overloaded object class for floating point numbers
 
 =head1 DESCRIPTION
-
-Scalar-backed overloaded object class for floating point numbers.
 
 Extends L<OP::Num> and L<Data::Float>.
 

@@ -14,7 +14,7 @@ package OP::Constants;
 
 =head1 NAME
 
-OP::Constants
+OP::Constants - Loads .oprc values as Perl constants
 
 =head1 DESCRIPTION
 

@@ -46,11 +46,9 @@ use warnings;
 
 =head1 NAME
 
-OP::Array
+OP::Array - Array object class
 
 =head1 DESCRIPTION
-
-Array object class.
 
 Extends L<OP::Object> to handle Perl ARRAY refs as OP Objects. Provides
 constructor, getters, setters, "Ruby-esque" collection, and other methods

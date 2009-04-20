@@ -12,11 +12,9 @@
 
 =head1 NAME
 
-OP::Int
+OP::Int - Overloaded object class for integers
 
 =head1 DESCRIPTION
-
-Scalar-backed overloaded object class for integers.
 
 Extends L<OP::Num> and L<Data::Integer>.
 

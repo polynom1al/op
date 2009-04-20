@@ -12,11 +12,9 @@
 
 =head1 NAME
 
-OP::Ref
+OP::Ref - Object class for references
 
 =head1 DESCRIPTION
-
-Object class for references.
 
 Extends L<OP::Any>
 

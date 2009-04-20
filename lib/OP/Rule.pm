@@ -12,11 +12,9 @@
 
 =head1 NAME
 
-OP::Rule
+OP::Rule - Object class for regular expressions
 
 =head1 DESCRIPTION
-
-Object class for regular expressions
 
 Extends L<OP::Ref>
 

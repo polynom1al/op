@@ -21,7 +21,7 @@ __END__
 
 =head1 NAME
 
-OP::Recur::Break
+OP::Recur::Break - Break statement for Recur loops
 
 =head1 SYNOPSIS
 

@@ -18,7 +18,7 @@ use OP::Enum qw|
 
 =head1 NAME
 
-OP::Enum::Consol - Consolidation types
+OP::Enum::Consol - Series data consolidation type enumeration
 
 =head1 DESCRIPTION
 

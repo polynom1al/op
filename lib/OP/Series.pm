@@ -551,7 +551,7 @@ create "OP::Series" => {
 
 =head1 NAME
 
-OP::Series
+OP::Series - Consolidated series data
 
 =head1 DESCRIPTION
 

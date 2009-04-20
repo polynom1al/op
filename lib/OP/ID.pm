@@ -12,11 +12,9 @@
 
 =head1 NAME
 
-OP::ID
+OP::ID - Overloaded GUID object class
 
 =head1 DESCRIPTION
-
-Scalar-backed overloaded object class for ID strings.
 
 Extends L<OP::Scalar> and L<Data::GUID>
 

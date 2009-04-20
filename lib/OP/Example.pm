@@ -12,11 +12,9 @@
 
 =head1 NAME
 
-OP::Example
+OP::Example - Example of a prototyped class, for testing and playing with
 
 =head1 DESCRIPTION
-
-Working example of a prototyped class, for testing and playing with.
 
 This package is based on examples found in the documentation for
 L<OP::Class> and its associated packages.

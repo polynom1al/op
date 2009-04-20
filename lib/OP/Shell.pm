@@ -146,11 +146,7 @@ __END__
 
 =head1 NAME
 
-OP::Shell
-
-=head1 DESCRIPTION
-
-Interactive Perl 5 shell (experimental)
+OP::Shell - Experimental interactive Perl 5 shell
 
 =head1 SYNOPSIS
 

@@ -14,7 +14,7 @@ package OP::Persistence;
 
 =head1 NAME
 
-OP::Persistence
+OP::Persistence - Serialization mix-in
 
 =head1 DESCRIPTION
 

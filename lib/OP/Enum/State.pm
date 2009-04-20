@@ -18,12 +18,11 @@ eval {
 
 =head1 NAME
 
-OP::Enum::State
+OP::Enum::State - Criticality enumeration
 
 =head1 DESCRIPTION
 
-Criticality enumeration. Exports "Nagios-style" states: OK (0), Warn
-(1), and Crit (2).
+Exports "Nagios-style" states: OK (0), Warn (1), and Crit (2).
 
 =head1 SYNOPSIS
 

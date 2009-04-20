@@ -14,11 +14,7 @@ package OP::Utility;
 
 =head1 NAME
 
-OP::Utility
-
-=head1 DESCRIPTION
-
-System functions required globally by OP
+OP::Utility - System functions required globally by OP
 
 =head1 SYNOPSIS
 

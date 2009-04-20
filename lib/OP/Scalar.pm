@@ -32,11 +32,9 @@ use base qw| OP::Class::Dumper OP::Object |;
 
 =head1 NAME
 
-OP::Scalar
+OP::Scalar - Scalar object class
 
 =head1 DESCRIPTION
-
-Scalar object class.
 
 Extends L<OP::Object> to handle Perl scalar values as OP Objects.
 

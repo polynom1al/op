@@ -14,7 +14,7 @@ package OP::Object;
 
 =head1 NAME
 
-OP::Object
+OP::Object - Abstract object class
 
 =head1 DESCRIPTION
 

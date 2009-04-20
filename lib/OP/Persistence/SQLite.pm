@@ -14,7 +14,7 @@ package OP::Persistence::SQLite;
 
 =head1 NAME
 
-OP::Persistence::SQLite
+OP::Persistence::SQLite - Handle GlobalDBI setup for SQLite
 
 =head1 FUNCTION
 

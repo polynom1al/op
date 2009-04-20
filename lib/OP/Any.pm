@@ -65,7 +65,7 @@ __END__
 
 =head1 NAME
 
-OP::Any
+OP::Any - Object class wrapper for any type of variable
 
 
 =head1 VERSION
@@ -78,8 +78,6 @@ OP::Any
 
 
 =head1 DESCRIPTION
-
-Object class wrapper for any type of variable
 
 Extends L<OP::Scalar>
 

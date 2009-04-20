@@ -283,7 +283,7 @@ __END__
 
 =head1 NAME
 
-OP::Class
+OP::Class - Root-level "Class" class
 
 
 =head1 VERSION

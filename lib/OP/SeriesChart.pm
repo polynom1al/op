@@ -692,7 +692,7 @@ __END__
 
 =head1 NAME
 
-OP::SeriesChart
+OP::SeriesChart - Experimental image-based series visualizer
 
 =head1 SYNOPSIS
 

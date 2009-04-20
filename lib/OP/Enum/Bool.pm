@@ -14,7 +14,7 @@ package OP::Enum::Bool;
 
 =head1 NAME
 
-OP::Enum::Bool
+OP::Enum::Bool - Boolean enumeration
 
 =head1 DESCRIPTION
 

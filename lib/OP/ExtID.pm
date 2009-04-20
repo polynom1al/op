@@ -12,11 +12,9 @@
 
 =head1 NAME
 
-OP::ExtID
+OP::ExtID - Overloaded object class for foreign base64-encoded GUIDs
 
 =head1 DESCRIPTION
-
-Scalar-backed overloaded object class for foreign base64-encoded GUIDs
 
 Extends L<OP::ID>.
 

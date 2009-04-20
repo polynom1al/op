@@ -138,7 +138,7 @@ __END__
 
 =head1 NAME
 
-OP - Objective Perl 5 (Overpowered)
+OP - Compact Perl 5 class prototyping with object persistence
 
 =head1 VERSION
 

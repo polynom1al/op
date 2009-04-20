@@ -12,7 +12,7 @@
 
 =head1 NAME
 
-OP::Log
+OP::Log - Circular message sink wrapper
 
 =head1 DESCRIPTION
 

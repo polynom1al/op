@@ -26,7 +26,7 @@ use Hash::Util;
 
 =head1 NAME
 
-OP::Hash
+OP::Hash - Hashtable object
 
 =head1 DESCRIPTION
 

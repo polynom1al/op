@@ -14,7 +14,7 @@ package OP::Persistence::MySQL;
 
 =head1 NAME
 
-OP::Persistence::MySQL
+OP::Persistence::MySQL - Handle GlobalDBI setup for MySQL/InnoDB
 
 =head1 FUNCTION
 

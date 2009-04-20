@@ -12,11 +12,9 @@
 
 =head1 NAME
 
-OP::Code
+OP::Code - Object class for code blocks
 
 =head1 DESCRIPTION
-
-Object class for code blocks.
 
 Extends L<OP::Ref>
 

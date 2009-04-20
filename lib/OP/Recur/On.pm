@@ -71,7 +71,7 @@ __END__
 
 =head1 NAME
 
-OP::Recur::On
+OP::Recur::On - Time specification object class
 
 =head1 SYNOPSIS
 

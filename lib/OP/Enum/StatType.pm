@@ -14,7 +14,7 @@ use OP::Enum qw| Gauge Counter Derivative |;
 
 =head1 NAME
 
-OP::Enum::StatType
+OP::Enum::StatType - Series statistic type enumeration
 
 =head1 DESCRIPTION
 

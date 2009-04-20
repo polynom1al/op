@@ -54,7 +54,7 @@ __END__
 
 =head1 NAME
 
-OP::Domain
+OP::Domain - Fully qualified domain name object
 
 =head1 VERSION
 

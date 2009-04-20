@@ -12,11 +12,7 @@
 
 =head1 NAME
 
-OP::Exceptions
-
-=head1 DESCRIPTION
-
-Defines the exceptions which may be thrown inside of OP
+OP::Exceptions - Defines the exceptions which may be thrown inside of OP
 
 =head1 EXCEPTION LIST
 

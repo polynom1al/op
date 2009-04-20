@@ -43,7 +43,7 @@ __END__
 
 =head1 NAME
 
-OP::Name
+OP::Name - A unique secondary key
 
 =head1 SYNOPSIS
 
