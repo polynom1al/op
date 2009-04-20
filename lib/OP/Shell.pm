@@ -10,8 +10,6 @@
 #
 use OP;
 
-use feature ":5.10";
-
 use Lexical::Persistence;
 use Term::ReadLine;
 
@@ -30,12 +28,12 @@ create "OP::Shell" => {
   },
 
   help => method() {
-    say "Commands:";
-    say "  empty line    # compile & continue";
-    say "  exit          # exit";
-    say "  ?pkgname      # perldoc for named package";
-    say "  !cmd          # spawn system shell and run cmd";
-    say "";
+    print "Commands:\n";
+    print "  empty line    # compile & continue\n";
+    print "  exit          # exit\n";
+    print "  ?pkgname      # perldoc for named package\n";
+    print "  !cmd          # spawn system shell and run cmd\n";
+    print "\n";
   },
 
   historyFile => method() {
@@ -48,8 +46,8 @@ create "OP::Shell" => {
   },
 
   run => method() {
-    say "Welcome to the OP Perl shell.";
-    say "";
+    print "Welcome to the OP Perl shell.\n";
+    print "\n";
 
     $self->help();
 
@@ -87,7 +85,7 @@ create "OP::Shell" => {
       "OP::Class", "OP::Object",
       "OP::Persistence", "OP::Array", "OP::Hash",
       "OP::Example", "OP::Utility",
-      "say", "my", "use", "require", "if", "else", "sub", "constant", 
+      "my", "use", "require", "if", "else", "sub", "constant", 
       OP::Class->members(),
       # OP::Class::members("OP::Persistence"),
       # OP::Class::members("OP::Utility"),
@@ -102,7 +100,7 @@ create "OP::Shell" => {
     while(1) {
       while( my $line = $term->readline($prompt) ) {
         if ( $line =~ /^\?(\w+.*)/ ) {
-          say "Loading $1 documentation, please wait...";
+          print "Loading $1 documentation, please wait...\n";
 
           system("perldoc $1");
 
@@ -127,7 +125,7 @@ create "OP::Shell" => {
       } catch Error with {
         my $error = shift;
 
-        say "Compile failed! $error";
+        print "Compile failed! $error\n";
       };
 
       if ( -e $historyFile ) {
