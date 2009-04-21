@@ -37,6 +37,7 @@ my $prereqs = {
              Scalar::Util => 1.19,
             Sys::Hostname => 1.11,
            Term::ReadLine => 1,
+               Test::More => 0.86,
               Time::HiRes => 1.9711,
               Time::Local => 1.18,
               Time::Piece => 1.13,
