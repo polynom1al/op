@@ -397,49 +397,6 @@ it must pass the L<UNIVERSAL>C<::isa()> test). The Perl6::Subs equivalent
 pseudo-types are designed around Perl 5's native data types, and are
 suitable for testing non-objects.
 
-As an academic example, here are less-picky and more-picky subs:
-
-  #
-  # Less-picky, duck-typey sub:
-  #
-  sub doSomethingWithHash(Hash $hash) {
-    say $hash ? "I'm happy with $hash" : "I got nothin'";
-  }
-
-  #
-  # Pickier sub:
-  #
-  sub pickyHashSub(OP::Hash $hash) {
-    doSomethingWithHash($hash);
-  }
-
-Here is code to test the less-picky version:
-
-  #
-  # This says "I'm happy with OP::Hash=HASH(0xDEADBEEF)"
-  #
-  doSomethingWithHash(OP::Hash->new());
-
-  #
-  # This says "I'm happy with HASH(0xDEADBEEF)"
-  #
-  doSomethingWithHash({ });
-
-And code to test its pickier counterpart:
-
-  #
-  # This says "I'm happy with OP::Hash=HASH(0xDEADBEEF)":
-  #
-  pickyHashSub(OP::Hash->new());
-
-  #
-  # But this will throw an exception like:
-  #
-  # - Unhandled OP::InvalidArgument Exception:
-  #   Parameter $hash is not an OP::Hash in call to main::pickyHashSub ...
-  #
-  pickyHashSub({ });
-
 Note that constructors and setter methods accept both native Perl 5 data
 types and their OP object class equivalents. The setters will
 automatically handle any necessary conversion, or throw an exception if
