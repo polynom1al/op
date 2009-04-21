@@ -154,6 +154,8 @@ OP::Shell - Experimental interactive Perl 5 shell
 
   $shell->run();
 
+A wrapper script, C<opsh>, is included with this distribution.
+
 =head1 BUGS
 
   Source filtering syntax does not work in interactive mode.
