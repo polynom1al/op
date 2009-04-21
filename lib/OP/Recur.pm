@@ -568,6 +568,13 @@ create "OP::Recur" => {
 
   each => method(*@args) {
     if ( @args ) {
+      #
+      # Multi-method - allow iterator usage like other OP classes
+      #
+      if ( @args == 1 && UNIVERSAL::isa($args[0], "CODE") ) {
+        return OP::Hash::collect($self, @args);
+      }
+
       $self->{_each}->push( OP::Recur::Each->new(@args) );
     } else {
       return $self->{_each};
