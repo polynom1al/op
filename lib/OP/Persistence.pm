@@ -49,6 +49,7 @@ use File::Copy;
 use File::Path;
 use File::Find;
 use IO::File;
+use JSON::Syck;
 use Perl6::Subs;
 use Rcs;
 use Time::HiRes qw| time |;
@@ -669,6 +670,29 @@ method loadYaml(OP::Class $class: Str $yaml) {
 
   # return bless $hash, $class;
   # return $class->new($hash);
+};
+
+
+=pod
+
+=item * $class->loadJson($string)
+
+Load the received string containing JSON into an instance of the
+receiving class.
+
+Warns and returns undef if the load fails.
+
+=cut
+
+method loadJson(OP::Class $class: Str $json) {
+  throw OP::InvalidArgument( "Empty YAML stream received" )
+    if !$json;
+
+  my $hash = JSON::Syck::Load($json);
+
+  throw OP::DataConversionFailed($@) if $@;
+
+  return $class->__marshal($hash);
 };
 
 
