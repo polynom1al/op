@@ -59,7 +59,7 @@ __END__
 
 =head1 NAME
 
-OP/Redefines.pm - Runtime overrides for OP
+OP::Redefines - Runtime overrides for OP
 
 =head1 SYNOPSIS
 
