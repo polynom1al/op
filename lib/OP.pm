@@ -1,7 +1,7 @@
 #
 # File: OP.pm
 #
-# Copyright (c) 2005 TiVo Inc.
+# Copyright (c) 2009 TiVo Inc.
 #
 # All rights reserved. This program and the accompanying materials
 # are made available under the terms of the Common Public License v1.0
@@ -143,8 +143,6 @@ OP - Compact Perl 5 class prototyping with object persistence
 =head1 VERSION
 
 This documentation is for version B<0.20> of OP.
-
-  $Id: //depotit/tools/snitchd/OP-0.20/lib/OP.pm#2 $
 
 =head1 STATUS
 

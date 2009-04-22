@@ -3,6 +3,36 @@ use diagnostics;
 
 use Test::More tests => 30;
 
+my $temprc = "/tmp/.oprc";
+
+#
+# OP will not compile without a valid .oprc.
+#
+# Set up a fake .oprc so testing may proceed.
+#
+# This gets removed when testing is complete.
+#
+open(OPRC, ">", $temprc) || die $@;
+
+print OPRC q|
+---
+yamlRoot: /tmp/yaml
+sqliteRoot: /tmp/sqlite
+scratchRoot: /tmp
+dbName: op
+dbHost: localhost
+dbPass: ~
+dbPort: 3306
+dbUser: op
+rcsBindir: /usr/bin
+rcsDir: RCS
+memcachedHosts: ~
+syslogHost: ~
+|;
+close(OPRC);
+
+$ENV{OP_HOME} = '/tmp';
+
 #
 # Very basic OP tests.
 #
@@ -89,6 +119,11 @@ isa_ok( OP::Hash->new, "OP::Hash");
 
 isa_ok( OP::Recur->new, "OP::Recur");
 
+#
+# Remove the tempfile
+#
+unlink $temprc;
+
 sub createTestClass {
   my $class = shift;
 
@@ -132,4 +167,3 @@ sub testDeleter {
 
   return $self->foo;
 };
-
