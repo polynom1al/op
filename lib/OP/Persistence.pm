@@ -2793,12 +2793,49 @@ method remove(Str ?$reason) {
   my $class = $self->class();
 
   if ( $class->__useDbi() ) {
+    my $began = $class->__beginTransaction();
+
+    if ( !$began ) {
+      throw OP::TransactionFailed($@);
+    }
+
+    #
+    # Purge multi-value elements residing in linked tables
+    #
+    for ( keys %{ $asserts } ) {
+      my $key = $_;
+    
+      my $type = $asserts->{$_};
+      
+      next if !$type->objectClass->isa("OP::Array")
+        && !$type->objectClass->isa("OP::Hash");
+
+      my $elementClass = $class->elementClass($key);
+
+      next if !$elementClass;
+    
+      $elementClass->write(  
+        sprintf 'DELETE FROM %s WHERE parentId = %s',
+        $elementClass->tableName,
+        $class->quote($self->key)
+      );
+    }
+
     #
     # Try to run a 'delete' on an existing row
     #
     $class->write(
       $self->_deleteRowStatement()
     );
+
+    my $committed = $class->__commitTransaction();
+
+    if ( !$committed ) {
+      #
+      # If this happens, freak out.
+      #
+      throw OP::TransactionFailed("COMMIT failed on remove");
+    }
   }
 
   if ( $memd && $class->__useMemcached() ) {
