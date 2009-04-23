@@ -1164,7 +1164,7 @@ method __marshal(OP::Class $class: Hash $self) {
 
         my $sth = $elementClass->query( sprintf q|
             select * from %s where parentId = %s
-              order by elementIndex
+              order by elementIndex + 0
           |,
           $elementClass->tableName(),
           $elementClass->quote($self->{ $class->__primaryKey() })
