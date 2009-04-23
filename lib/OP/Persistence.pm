@@ -2792,6 +2792,8 @@ Does B<not> delete RCS history, if present.
 method remove(Str ?$reason) {
   my $class = $self->class();
 
+  my $asserts = $class->asserts;
+
   if ( $class->__useDbi() ) {
     my $began = $class->__beginTransaction();
 
