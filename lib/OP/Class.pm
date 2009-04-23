@@ -43,7 +43,7 @@ use Scalar::Util qw| blessed reftype |;
 ## Class Vars & Exports
 ##
 
-our $VERSION = '0.20_03';
+our $VERSION = '0.21';
 
 our @EXPORT_OK = (
   qw|

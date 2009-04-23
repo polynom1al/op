@@ -142,7 +142,7 @@ OP - Compact Perl 5 class prototyping with object persistence
 
 =head1 VERSION
 
-This documentation is for version B<0.20> of OP.
+This documentation is for version B<0.21> of OP.
 
 =head1 STATUS
 
