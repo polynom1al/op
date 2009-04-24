@@ -127,27 +127,20 @@ This method will delegate to the appropriate private backend method. It
 returns the requested object, or throws an exception if the object was
 not found.
 
-  #
-  # My Secret Web 2.0 Business Plan:
-  #
-  my $object = $class->load($id);
+  my $object;
 
-  if ( defined $object ) {
-    $self->profit($$, $object);
+  try {
+    $object = $class->load($id);
+  } catch Error with {
+    # ...
 
-    return true;
-  } else {
-    $everybody->panic();
-
-    return false;
-  }
+  };
 
 =cut
 
 method load(OP::Class $class: Str $id) {
   return $class->__localLoad($id);
 };
-
 
 
 =pod
